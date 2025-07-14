@@ -39,3 +39,17 @@
 
 # debug information files
 *.dwo
+
+# Unreal Engine
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vscode/
+.idea/
+# Build files
+*.sln
+*.sdf
+*.opensdf
+*.VC.db
+*.vcxproj*
