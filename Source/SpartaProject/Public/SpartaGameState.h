@@ -33,6 +33,14 @@ public:
 	FTimerHandle LevelTimerHandle;
 	FTimerHandle HUDUpdateTimerHandle;
 
+	//wave
+	//현재 웨이브
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Wave")
+	int32 CurrentWaveIndex;
+	//레벨당 웨이브
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Wave")
+	int32 MaxWaveCount;
+	
 	UFUNCTION(BlueprintPure, Category = "Score")
 	int32 GetScore() const;
 	UFUNCTION(BlueprintCallable, Category = "Score")
@@ -46,6 +54,9 @@ public:
 	void OnCoinCollected();
 	void EndLevel();
 	void UpdateHUD();
+	//wave
+	void StartWave();
+	void EndWave();
 	
 	
 };
